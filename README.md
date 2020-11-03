@@ -8,6 +8,7 @@ My personal software setup on Linux distributions, automated with Ansible
 ## Software
 
 ### Fundamentals
+* Vim
 * Firefox
 * Terminator
 
