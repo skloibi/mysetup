@@ -1,6 +1,11 @@
 # Linux Setup
 My personal software setup on Linux distributions, automated with Ansible
 
+## System
+* KDE
+* Sway
+* Waybar
+
 ## Software
 
 ### Fundamentals
