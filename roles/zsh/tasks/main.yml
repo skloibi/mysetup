@@ -1,0 +1,21 @@
+---
+- name: install Zsh
+  become: True
+  package:
+    name: zsh
+    state: present
+
+- name: change user shell to zsh
+  user:
+    name: "{{ the_user }}"
+    shell: /usr/bin/zsh
+
+- name: download oh-my-zsh
+  get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/install-oh-my-zsh.sh
+    mode: 0755
+
+- name: install oh-my-zsh
+  command: zsh /tmp/install-oh-my-zsh.sh
+

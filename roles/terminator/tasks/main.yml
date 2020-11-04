@@ -1,0 +1,6 @@
+---
+- name: install terminator
+  become: True
+  package:
+    name: terminator
+    state: present
