@@ -1,0 +1,6 @@
+---
+- name: install OpenJDK
+  package:
+    name: java-latest-openjdk-devel
+    state: present
+

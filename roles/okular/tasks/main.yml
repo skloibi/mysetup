@@ -1,0 +1,6 @@
+---
+- name: install okular
+  become: True
+  package:
+    name: okular
+    state: present

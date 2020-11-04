@@ -10,12 +10,16 @@
     name: "{{ the_user }}"
     shell: /usr/bin/zsh
 
+- stat: path=$HOME/.oh-my-zsh
+  register: oh_my_zsh_dir
 - name: download oh-my-zsh
   get_url:
     url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
     dest: /tmp/install-oh-my-zsh.sh
     mode: 0755
+  when: not oh_my_zsh_dir.stat.exists
 
 - name: install oh-my-zsh
   command: zsh /tmp/install-oh-my-zsh.sh
+  when: not oh_my_zsh_dir.stat.exists
 

@@ -1,0 +1,11 @@
+---
+- name: import GPG key
+  become: True
+  rpm_key:
+    key: https://slack.com/gpg/slack_pubkey_2019.gpg
+    state: present
+- name: install Slack
+  become: True
+  dnf:
+    name: "https://downloads.slack-edge.com/linux_releases/{{ slack_version }}.rpm"
+    state: present
