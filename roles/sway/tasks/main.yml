@@ -19,3 +19,12 @@
   package:
     name: wdisplays
     state: present 
+- name: install wofi
+  package:
+    name: wofi
+    state: present
+- name: install waybar
+  package:
+    name: waybar
+    state: present
+
