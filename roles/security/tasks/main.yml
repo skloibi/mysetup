@@ -1,0 +1,17 @@
+---
+- name: Register Keybase GPG key
+  become: True
+  rpm_key:
+    key: https://keybase.io/docs/server_security/code_signing_key.asc
+    state: present
+- name: Install Keybase
+  become: True
+  dnf:
+    name: https://prerelease.keybase.io/keybase_amd64.rpm
+    state: present
+- name: Install KeePassXC
+  become: True
+  package:
+    name: keepassxc
+    state: present
+
