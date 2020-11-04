@@ -1,5 +1,6 @@
 ---
 - name: install OpenJDK
+  become: True
   package:
     name: java-latest-openjdk-devel
     state: present

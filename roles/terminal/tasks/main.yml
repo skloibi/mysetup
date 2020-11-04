@@ -1,4 +1,10 @@
 ---
+- name: install Terminator
+  become: True
+  package:
+    name: terminator
+    state: present
+
 - name: install Zsh
   become: True
   package:

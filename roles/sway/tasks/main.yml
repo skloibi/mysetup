@@ -1,0 +1,21 @@
+---
+- name: install sway
+  become: True
+  package:
+    name: sway
+    state: present
+- name: install swaylock
+  become: True
+  package:
+    name: swaylock
+    state: present
+- name: install swayidle
+  become: True
+  package:
+    name: swayidle
+    state: present
+- name: install wdisplays
+  become: True
+  package:
+    name: wdisplays
+    state: present 

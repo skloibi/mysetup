@@ -1,0 +1,11 @@
+---
+- name: install Xwayland
+  become: True
+  package:
+    name: xorg-x11-server-Xwayland
+    state: present
+- name: install Xorg utils
+  become: True
+  package: 
+    name: xorg-x11-apps
+    state: present
