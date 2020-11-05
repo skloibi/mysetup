@@ -43,4 +43,17 @@
   package:
     name: light
     state: present
+- name: "Enable shengis/mako module"
+  become: True
+  command: dnf copr enable -y shengis/mako
+  args:
+    warn: False
+  register: result
+  changed_when:
+    - '"Enabling module streams" in result.stdout'
+- name: install Mako notification daemon
+  become: True
+  package:
+    name: mako
+    state: present
 
