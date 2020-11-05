@@ -1,0 +1,21 @@
+---
+- name: install Breeze theme (GTK)
+  become: True
+  package:
+    name: breeze-gtk
+    state: present
+- name: install Breeze theme (Qt4)
+  become: True
+  package:
+    name: kde-style-breeze
+    state: present
+- name: install Breeze icon theme
+  become: True
+  package:
+    name: breeze-icon-theme
+    state: present
+- name: install Breeze cursor theme
+  become: True
+  package:
+    name: breeze-cursor-theme
+    state: present

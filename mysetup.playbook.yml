@@ -4,6 +4,7 @@
   roles:
     - wayland
     - sway
+    - themes
     - terminal
     - vim
     - firefox
