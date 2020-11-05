@@ -38,4 +38,9 @@
   package:
     name: waybar
     state: present
+- name: install light
+  become: True
+  package:
+    name: light
+    state: present
 

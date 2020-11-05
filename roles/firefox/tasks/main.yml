@@ -1,6 +1,21 @@
 ---
-- name: Install Firefox
+- name: install Firefox
   become: True
   package:
     name: firefox
     state: present
+- name: install Wayland bindings
+  become: True
+  package:
+    name: firefox-wayland
+    state: present
+- name: copy desktop file
+  copy:
+    src: /usr/share/applications/firefox.desktop
+    dest: ~/.local/share/applications
+- name: use Wayland by default
+  replace:
+    path: ~/.local/share/applications/firefox.desktop
+    regexp: '^Exec=firefox'
+    replace: 'Exec=MOZ_ENABLE_WAYLAND=1 firefox'
+
