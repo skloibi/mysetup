@@ -9,13 +9,4 @@
   package:
     name: thunderbird-wayland
     state: present
-- name: copy desktop file
-  copy:
-    src: /usr/share/applications/mozilla-thunderbird.desktop
-    dest: ~/.local/share/applications
-- name: use Wayland by default
-  replace:
-    path: ~/.local/share/applications/mozilla-thunderbird.desktop
-    regexp: '^Exec=thunderbird'
-    replace: 'Exec=MOZ_ENABLE_WAYLAND=1 thunderbird'
 
