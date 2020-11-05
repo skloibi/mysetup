@@ -4,10 +4,19 @@
   package:
     name: sway
     state: present
-- name: install swaylock
+- name: "Enable eddsalkield/swaylock-effects module"
   become: True
-  package:
-    name: swaylock
+  command: dnf copr enable -y eddsalkield/swaylock-effects
+  args:
+    warn: False
+  register: result
+  changed_when:
+    - '"Enabling module streams" in result.stdout'
+- name: install swaylock effects
+  become: True
+  dnf:
+    enablerepo: eddsalkield/swaylock-effects
+    name: swaylock-effects
     state: present
 - name: install swayidle
   become: True
@@ -18,12 +27,14 @@
   become: True
   package:
     name: wdisplays
-    state: present 
+    state: present
 - name: install wofi
+  become: True
   package:
     name: wofi
     state: present
 - name: install waybar
+  become: True
   package:
     name: waybar
     state: present
