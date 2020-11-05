@@ -36,3 +36,6 @@ My personal software setup on Linux distributions, automated with Ansible
 * Visual Studio Code
 * Idealgraphvisualizer
 
+### Optional
+* Bluetooth manager
+
