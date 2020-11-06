@@ -1,6 +1,0 @@
----
-- name: install ark
-  become: True
-  package:
-    name: ark
-    state: present

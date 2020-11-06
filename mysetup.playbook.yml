@@ -2,13 +2,13 @@
 - name: Install and set up all major applications on my system
   hosts: all
   roles:
+    - gnome
     - wayland
     - sway
     - themes
     - terminal
     - vim
     - firefox
-    - ark
     - okular
     - slack
     - thunderbird

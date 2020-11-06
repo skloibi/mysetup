@@ -1,0 +1,40 @@
+---
+- name: autostart keyring for secrets
+  copy:
+    src: /etc/xdg/autostart/gnome-keyring-secrets.desktop
+    dest: ~/.config/autostart/gnome-keyring-secrets.desktop
+    force: no
+    mode: '0744'
+- name: enable for all window managers
+  lineinfile:
+    path: ~/.config/autostart/gnome-keyring-secrets.desktop
+    regexp: '^OnlyShowIn.*$'
+    state: absent
+- name: autostart keyring for SSH
+  copy:
+    src: /etc/xdg/autostart/gnome-keyring-ssh.desktop
+    dest: ~/.config/autostart/gnome-keyring-ssh.desktop
+    force: no
+    mode: '0744'
+- name: enable for all window managers
+  lineinfile:
+    path: ~/.config/autostart/gnome-keyring-ssh.desktop
+    regexp: '^OnlyShowIn.*$'
+    state: absent
+- name: autostart keyring for pkcs11
+  copy:
+    src: /etc/xdg/autostart/gnome-keyring-pkcs11.desktop
+    dest: ~/.config/autostart/gnome-keyring-pkcs11.desktop
+    force: no
+    mode: '0744'
+- name: enable for all window managers
+  lineinfile:
+    path: ~/.config/autostart/gnome-keyring-pkcs11.desktop
+    regexp: '^OnlyShowIn.*$'
+    state: absent
+
+- name: install NetworkManager applet
+  become: True
+  package:
+    name: network-manager-applet
+    state: present
