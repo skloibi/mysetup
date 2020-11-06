@@ -48,4 +48,9 @@
   package:
     name: mako
     state: present
+- name: install playerctl for media player control
+  become: True
+  package:
+    name: playerctl
+    state: present
 
