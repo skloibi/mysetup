@@ -9,6 +9,11 @@
   package:
     name: kde-style-breeze
     state: present
+- name: install Breeze theme (Qt5)
+  become: True
+  package:
+    name: plasma-breeze
+    state: present
 - name: install Breeze icon theme
   become: True
   package:
@@ -18,4 +23,9 @@
   become: True
   package:
     name: breeze-cursor-theme
+    state: present
+- name: install Qt5 theme controller
+  become: True
+  package:
+    name: qt5ct
     state: present
