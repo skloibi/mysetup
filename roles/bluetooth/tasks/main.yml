@@ -1,0 +1,11 @@
+---
+- name: install Bluez
+  become: True
+  package:
+    name: bluez
+    state: present
+- name: install Bluetooth manager
+  become: True
+  package:
+    name: blueman
+    state: present

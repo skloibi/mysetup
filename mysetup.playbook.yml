@@ -3,6 +3,8 @@
   hosts: all
   roles:
     - gnome
+    - network
+    - bluetooth
     - wayland
     - sway
     - themes

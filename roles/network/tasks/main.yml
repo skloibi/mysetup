@@ -1,0 +1,11 @@
+---
+- name: install NetworkManager connection editor
+  become: True
+  package:
+    name: nm-connection-editor
+    state: present
+- name: install NetworkManager applet
+  become: True
+  package:
+    name: network-manager-applet
+    state: present
