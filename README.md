@@ -48,7 +48,7 @@ My personal software setup on Linux distributions, (partially) automated with An
 ## Development
 * [OpenJDK](https://openjdk.java.net/)
 * [GraalVM](https://www.graalvm.org/)
-  * [JVMCI-enabled OpenJDK](https://github.com/graalvm/openjdk8-jvmci-builder/releases)
+  * [JVMCI-enabled OpenJDK](https://github.com/graalvm/graal-jvmci-8)
   * [Idealgraphvisualizer](https://docs.oracle.com/en/graalvm/enterprise/20/docs/tools/igv/)
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
   * [IntelliJ Community Edition](https://www.jetbrains.com/idea/)
