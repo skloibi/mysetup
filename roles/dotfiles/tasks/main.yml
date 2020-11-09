@@ -1,0 +1,6 @@
+---
+- name: install GNU stow
+  become: True
+  package:
+    name: stow
+    state: present
