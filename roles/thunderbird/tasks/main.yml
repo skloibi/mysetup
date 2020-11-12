@@ -4,9 +4,4 @@
   package:
     name: thunderbird
     state: present
-- name: install Wayland bindings
-  become: True
-  package:
-    name: thunderbird-wayland
-    state: present
 

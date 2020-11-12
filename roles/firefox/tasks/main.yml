@@ -4,9 +4,4 @@
   package:
     name: firefox
     state: present
-- name: install Wayland bindings
-  become: True
-  package:
-    name: firefox-wayland
-    state: present
 
