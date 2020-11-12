@@ -1,6 +1,8 @@
 ---
 - name: Install and set up all major applications on my system
   hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   roles:
     - gnome
     - network
