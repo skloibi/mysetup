@@ -1,0 +1,38 @@
+---
+- name: install i3
+  become: True
+  package:
+    name: i3
+    state: present
+- name: install polybar
+  become: True
+  package:
+    name: polybar
+    state: present
+- name: install dmenu
+  become: True
+  package:
+    name: dmenu
+    state: present
+- name: install i3lock
+  become: True
+  package:
+    name: i3lock
+    state: present
+- name: install xbacklight
+  become: True
+  package:
+    name: xbacklight
+    state: present
+- name: install feh
+  become: True
+  package:
+    name: feh
+    state: present
+- name: install conky
+  become: True
+  package:
+    name: conky
+    state: present
+
+# i3 i3status dmenu i3lock xbacklight feh conky

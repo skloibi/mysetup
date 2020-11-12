@@ -5,8 +5,12 @@
     - gnome
     - network
     - bluetooth
-    - wayland
-    - sway
+    - role: wayland
+      tags: wayland
+    - role: sway
+      tags: wayland
+    - role: i3
+      tags: x11
     - themes
     - terminal
     - vim

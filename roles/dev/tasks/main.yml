@@ -1,4 +1,30 @@
 ---
+- name: install development tools
+  become: True
+  package:
+    name: "@development-tools"
+    state: present
+- name: install CMake
+  become: True
+  package:
+    name: cmake
+    state: present
+- name: install GCC C++
+  become: True
+  package:
+    name: gcc-c++
+    state: present
+- name: install autoconf
+  become: True
+  package:
+    name: autoconf
+    state: present
+- name: install automake
+  become: True
+  package:
+    name: automake
+    state: present
+# @development-tools cmake gcc-c++ autoconf automake
 - name: install OpenJDK
   become: True
   package:

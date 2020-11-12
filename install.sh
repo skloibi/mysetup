@@ -2,5 +2,10 @@
 
 sudo dnf install ansible
 
-ansible-playbook -i hosts mysetup.playbook.yml
-
+if [[ "$SETUP_WM" == "X11" ]]; then
+  echo ":: Using X11"
+  ansible-playbook -i hosts --skip-tags wayland mysetup.playbook.yml
+else
+  echo ":: Using Wayland"
+  ansible-playbook -i hosts --skip-tags x11 mysetup.playbook.yml
+fi
