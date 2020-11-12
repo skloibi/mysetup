@@ -34,5 +34,14 @@
   package:
     name: conky
     state: present
+- name: install arandr
+  become: True
+  package:
+    name: arandr
+    state: present
+- name: install dunst
+  become: True
+  package:
+    name: dunst
+    state: present
 
-# i3 i3status dmenu i3lock xbacklight feh conky
