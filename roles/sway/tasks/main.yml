@@ -53,4 +53,14 @@
   package:
     name: playerctl
     state: present
+- name: install libappindicator
+  become: True
+  package:
+    name: libappindicator
+    state: present
+- name: install libappindicator for GTK
+  become: True
+  package:
+    name: libappindicator-gtk3
+    state: present
 
