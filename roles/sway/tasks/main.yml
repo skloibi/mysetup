@@ -23,11 +23,13 @@
   package:
     name: swayidle
     state: present
+# display manager
 - name: install wdisplays
   become: True
   package:
     name: wdisplays
     state: present
+# menu and status bar
 - name: install wofi
   become: True
   package:
@@ -38,20 +40,34 @@
   package:
     name: waybar
     state: present
+# screenshot utils
+- name: install grim
+  become: True
+  package:
+    name: grim
+    state: present
+- name: install slurp
+  become: True
+  package:
+    name: slurp
+    state: present
+# brightness control for status bar
 - name: install light
   become: True
   package:
     name: light
     state: present
-- name: install Mako notification daemon
-  become: True
-  package:
-    name: mako
-    state: present
+# sound control for status bar
 - name: install playerctl for media player control
   become: True
   package:
     name: playerctl
+    state: present
+# notification daemon and API
+- name: install Mako notification daemon
+  become: True
+  package:
+    name: mako
     state: present
 - name: install libappindicator
   become: True
