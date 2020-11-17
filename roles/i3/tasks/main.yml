@@ -19,10 +19,10 @@
   package:
     name: i3lock
     state: present
-- name: install xbacklight
+- name: install light
   become: True
   package:
-    name: xbacklight
+    name: light
     state: present
 - name: install feh
   become: True
