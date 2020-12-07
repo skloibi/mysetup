@@ -29,3 +29,9 @@
   command: zsh /tmp/install-oh-my-zsh.sh
   when: not oh_my_zsh_dir.stat.exists
 
+- name: install FZF
+  become: True
+  package:
+    name: fzf
+    state: present
+
