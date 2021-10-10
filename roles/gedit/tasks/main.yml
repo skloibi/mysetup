@@ -1,0 +1,11 @@
+---
+- name: install gedit
+  become: True
+  package:
+    name: gedit
+    state: present
+- name: install gedit plugins
+  become: True
+  package:
+    name: gedit-plugins
+    state: present
