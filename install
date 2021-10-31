@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo dnf install ansible
+sudo dnf install -y ansible
 
 if [ -n "$USE_X11" ]; then
   echo ":: Using X11"
