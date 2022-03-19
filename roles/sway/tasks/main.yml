@@ -30,10 +30,10 @@
     name: wdisplays
     state: present
 # menu and status bar
-- name: install wofi
+- name: install bemenu
   become: True
   package:
-    name: wofi
+    name: bemenu
     state: present
 - name: install waybar
   become: True
