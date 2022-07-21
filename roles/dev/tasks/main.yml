@@ -30,4 +30,14 @@
   package:
     name: java-latest-openjdk-devel
     state: present
+- name: Install pv
+  become: True
+  package:
+    name: pv
+    state: present
+- name: Install Netwide x86 Assembler
+  become: True
+  package:
+    name: nasm
+    state: present
 
