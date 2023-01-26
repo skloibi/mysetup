@@ -9,10 +9,10 @@
   package:
     name: polybar
     state: present
-- name: install dmenu
+- name: install rofi
   become: True
   package:
-    name: dmenu
+    name: rofi
     state: present
 - name: install i3lock
   become: True
