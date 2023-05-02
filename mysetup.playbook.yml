@@ -13,6 +13,7 @@
       tags: wayland
     - role: i3
       tags: x11
+    - ssh
     - themes
     - terminal
     - vim

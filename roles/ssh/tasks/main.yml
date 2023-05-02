@@ -1,0 +1,6 @@
+---
+- name: install keychain
+  become: True
+  package:
+    name: keychain
+    state: present
